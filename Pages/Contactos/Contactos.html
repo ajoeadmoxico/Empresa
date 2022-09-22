@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Sources/Styles/all.css" media="all">
+    <link rel="stylesheet" href=".../../Sources/Styles/desktop.css" media="screen">
+    <link rel="stylesheet" href="../../Sources/Styles/mobile.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="../../Sources/Fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../Sources/Styles/w3.css">
+    <script src="../../Sources/Script/ScriptAction.js"></script>
+
+    <title>Ajoead - Prestação de Serviços e Formação Profissional</title>
+</head>
+<body onload="openCity(event, 'contacto');verificarJanela()">
+   <header>
+        <nav class="navegacao w3-container w3-navbar w3-top  w3-text-blue">
+            <section class="logotipo_cima fundo-img">
+                <img src="../../Sources/img/AjoeadLogo.svg" alt="" width="60px">
+                <span>
+                <p style="font-weight:bold;" class="nome_empresa">AJOEAD MOXICO</p>
+                <p style="font-size: smaller; line-height:0.8">Empresa de Prestação de Serviços e Formação Profissional</p>
+                </span>
+            </section>
+            <section>
+                <ul class="item-menu">
+                    <li><a onclick="openWindow('home')" href="#" class="w3-blue"><i class="icon-home"></i> Home</a></li>
+                    <li><a onclick="openWindow('service')"  href="#"><i class="icon-user"></i> Serviços</a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i> Cursos</a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i> Galeria</a></li>
+                    <li><a onclick="openWindow('contact')"  href="#" class="w3-blue"><i class="icon-phone"></i> Contactos</a></li>
+                </ul>
+            </section>
+            <section>
+                <a onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
+                <div class="">
+                  
+                    <div id="demoAcc" class="w3-sidenav w3-white  w3-animate-rigth" style="width:30%; left:0;display:none">
+                        <a href="javascript:void(0)" onclick="w3_close()" 
+                        class="w3-closenav w3-large w3-hide-large">×</a>
+ 
+                    <li><a onclick="openWindow('home')"  href="#" class=""><i class="icon-home"></i><br> Home</a></li>
+                    <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i><br> Cursos</a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i><br> Galeria</a></li>
+                    <li><a onclick="openWindow('contact')"  href="#" class="w3-blue"><i class="icon-phone"></i><br> Contactos</a></li>
+
+                    </div>
+            </section>
+        </nav>
+   </header>
+   
+   <main class="">
+    <div id="id01" class="w3-container" style="margin-top:100px ;">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+         <header class="w3-container w3-blue"> 
+          
+          <h2>Contacte-nos Agora</h2>
+         </header>
+       
+         <ul class="w3-navbar w3-white w3-border-bottom" style="width:100%;">
+          <li><a href="#" class="tablink" onclick="openCity(event, 'contacto')">Informação de Contacto</a></li>
+          <li><a href="#" class="tablink" onclick="openCity(event, 'message')">Enviar Correio Electrônico</a></li>
+          <li><a href="#" class="tablink" onclick="openCity(event, 'map')">Mapa</a></li>
+         </ul>
+       
+         <div id="contacto" class="w3-container city" style="width:80% ; margin:50px auto 50px auto;">
+            <ol>
+                <h2>Terminais telefonicos</h2>
+                <li><i class="icon-phone"></i>+244 940 217 560</li>
+                <li><i class="icon-phone"></i>+244 940 217 560</li>
+                <li><i class="icon-phone"></i>+244 940 217 560</li>
+                <hr>
+                <h2>Correio Electrônico</h2>
+                <a href="https://ajoeadmoxico@gmail.com" target="_blank"><li><i class="icon-email"></i>ajoeadmoxico@gmail.com</li></a>
+                <a href="https://ajoead@gmail.com" target="_blank"><li><i class="icon-email"></i>ajoead@gmail.com</li></a>
+                <a href="https://ajoeadmoxico.negocio.com" target="_blank"><li><i class="icon-email"></i>Nossos Horários</li></a>
+                <hr>
+                <h2>Localização</h2>
+                <li><i class="icon-localization"></i><strong>Bairro:</strong> Saidy Mingas</li>
+                <li><i class="icon-localization"></i><strong>Rua:</strong>Comandante Ngola</li>
+                <li><i class="icon-localization"></i><strong>Endereço:</strong>Junto a repartição da Administração Fiscal do Luena</li>
+                <li><i class="icon-localization"></i><strong>Cidade:</strong>Luena</li>
+                <li><i class="icon-localization"></i><strong>Provincia</strong>Moxico</li>
+                <li><i class="icon-localization"></i><strong>País:</strong>Angola</li>
+               
+            </ol>
+         </div>
+       
+         <div id="message" class="w3-container city">
+            <div id="id01" class="">
+                
+                  <div class="w3-center"><br>
+                   
+                  </div>
+              
+                  <div class="w3-container">
+                    <div class="w3-section">
+                      <label><b>Nome Completo</b></label>
+                      <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Informe seu nome completo"/>
+              
+                      <label><b>E-mail</b></label>
+                      <input class="w3-input w3-border" type="email" placeholder="Informe correio electrônico"/>
+                      <label><b>Mensagem</b></label>
+                      <textarea class="w3-input w3-border"  placeholder="Digite o assunto aqui.."></textarea>
+              
+                      <button class="w3-btn w3-btn-block w3-orange">Enviar</button>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+              <div id="map" class="w3-container city">
+                <h1>Geomap</h1>
+                <p>Localizando seu mapa no google maps...</p><br>
+               </div>
+               <br><br><hr> 
+         </div>   
+         
+    </div>
+      
+   </main>
+   <footer class="w3-container">
+    <div>
+        <ul>
+            <li>
+                <img src="../../Sources/img/ajoead-branco.svg"  alt="Logo">
+            </li>
+            <li>
+                <h3>Contacto</h3>
+                <ol>
+                    <li><i class="telefone"></i>+244 940 217 560</li>
+                    <li><i class="telefone"></i>ajoeadmoxico@gmail.com</li>
+                    <li><i class="telefone"></i>Bairro Saidy Mingas, Rua Comandante Ngola, Luena, Moxico-Angola</li>
+                   
+                </ol>
+            </li>
+            <li>
+                <h3>Sobre</h3>
+                <ol>
+                    <li><a href="#">Nossos Serviços</a></li>
+                    <li><a href="#">Nossa Empresa</a></li>
+                    <li><a href="#">Nossa Gráfica</a></li>
+                   
+                </ol>
+            </li>
+            <li>
+                <h3>Suporte</h3>
+                <ol>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Politica & Privacidade</a></li>
+                    <li><a href="#">Formando</a></li>
+                   
+                </ol>
+            </li>
+        </ul>
+        <article>
+            <h3>Assine</h3>
+              <form class="w3-white w3-padding" action="index.html" method="post">
+                <p class="w3-label w3-text-blue">Inscreva na nossa lista de E-mails para poder entrar em contacto.</p>
+
+              <input class="w3-input w3-border w3-margin" type="email" name="inpMail" id="idmail" placeholder="Digite aqui o seu Correio Electronico" style="max-width: 96%;">
+              <button class="w3-btn w3-blue w3-margin" type="submit">Subscrever</button>
+            </form>
+        </article>
+    </div>
+    <section>
+        <p>Copyright &copy; 2022. Todos os direitos reservados a <a href="https://sunnet.suporte@gmail.com">Sunnet Lab</a></p>
+        <ul class="social">
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-instagram"></i></a></li>
+        </ul>
+    </section>
+   </footer>
+   <script src="../../Sources/Script/allScript.js"></script>
+
+   <script>
+    
+     
+    </script>
+</body>
+</html>

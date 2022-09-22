@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="Sources/Styles/mobile.css" media="screen and (max-width:768px)">
     <link rel="stylesheet" href="Sources/Fonts/font-awesome.min.css">
     <link rel="stylesheet" href="Sources/Styles/w3.css">
-   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+   <script src="Sources/Script/ScriptAction.js"></script>
+
     <title>Ajoead - Prestação de Serviços e Formação Profissional</title>
 </head>
 <body>
@@ -24,26 +26,26 @@
             </section>
             <section>
                 <ul class="item-menu">
-                    <li><a href="#" class="blue"><i class="icon-home"></i> Home</a></li>
-                    <li><a href="#"><i class="icon-user"></i> Serviços</a></li>
-                    <li><a href="#"><i class="icon-book"></i> Cursos</a></li>
-                    <li><a href="#"><i class="icon-picture"></i> Galaeria</a></li>
-                    <li><a href="#"><i class="icon-phone"></i> Contactos</a></li>
+                    <li><a onclick="openWindow('home')" href="#" class="w3-blue"><i class="icon-home"></i> Home</a></li>
+                    <li><a onclick="openWindow('service')"  href="#"><i class="icon-user"></i> Serviços</a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i> Cursos</a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i> Galeria</a></li>
+                    <li><a onclick="openWindow('contact')"  href="#"><i class="icon-phone"></i> Contactos</a></li>
                 </ul>
             </section>
             <section>
                 <a onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
                 <div class="">
                   
-                    <div id="demoAcc" class="w3-sidenav w3-collapse w3-white w3-card-8 w3-animate-rigth" style="width:200px">
+                    <div id="demoAcc" class="w3-sidenav w3-white  w3-animate-rigth" style="width:30%; left:0;display:none">
                         <a href="javascript:void(0)" onclick="w3_close()" 
                         class="w3-closenav w3-large w3-hide-large">×</a>
  
-                    <li><a href="#" class="w3-blue"><i class="icon-home"></i> Home</a></li>
-                    <li><a class="" href="#"><i class="icon-user"></i> Serviços</a></li>
-                    <li><a href="#"><i class="icon-book"></i> Cursos</a></li>
-                    <li><a href="#"><i class="icon-picture"></i> Galaeria</a></li>
-                    <li><a href="#"><i class="icon-phone"></i> Contactos</a></li>
+                    <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="icon-home"></i><br> Home</a></li>
+                    <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i><br> Cursos</a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i><br> Galeria</a></li>
+                    <li><a onclick="openWindow('contact')"  href="#" class=""><i class="icon-phone"></i><br> Contactos</a></li>
 
                     </div>
             </section>
@@ -87,35 +89,38 @@
             <div class="service">
                 <ul>
                     <li>
-                        <img src="Sources/img/AjoeadLogo.svg" alt="Formação Profissional">
+                        <img src="Sources/img/service_curses/formacao2.png" alt="Formação Profissional">
                         <h3>Formação Profissional</h3>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit distinctio ipsum voluptas est animi! Suscipit, veritatis quas.
                         </p>
                     </li>
                     <li>
-                        <img src="Sources/img/AjoeadLogo.svg" alt="Serviços de Limpeza e Saneamento Básico">
+                        <img src="Sources/img/service_curses/limpeza.png" alt="Serviços de Limpeza e Saneamento Básico">
                         <h3>Serviços de Limpeza e Saneamento Básico</h3>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit distinctio ipsum voluptas est animi! Suscipit, veritatis quas.
                         </p>
                     </li>
                     <li>
-                        <img src="Sources/img/AjoeadLogo.svg" alt="Serviços de Jardinagem">
+                        <img src="Sources/img/service_curses/jardinagem.svg" alt="Serviços de Jardinagem">
                         <h3>Serviços de Jardinagem</h3>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit distinctio ipsum voluptas est animi! Suscipit, veritatis quas.
+                            <span style="text-transform:uppercase ;">Valorize o seu empreendimento com serviços de Jardinagem e Paisagismo.</span><br>
+                            Nosso serviço garante a valorização e embelezamento ao ambiente
+                            transformando-o em um local agrdavel e harmonico para os mais diversos empreendimentos.
                         </p>
                     </li>
                     <li>
-                        <img src="Sources/img/AjoeadLogo.svg" alt="Serviços de Segurança Electronica">
+                        <img src="Sources/img/service_curses/Camera.svg" alt="Serviços de Segurança Electronica">
                         <h3>Serviços de Segurança Electronica</h3>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit distinctio ipsum voluptas est animi! Suscipit, veritatis quas.
+                            A AJOEAD MOXICO disponibiliza soluções de segurança e vigilancia electrônica.<br>
+                            <br>Circuitos Fechados de TV. Camaras Camufladas. Controle Remoto de Imagens.
                         </p>
                     </li>
                     <li>
-                        <img src="Sources/img/AjoeadLogo.svg" alt="Serviços de Gráfica">
+                        <img src="Sources/img/service_curses/grafica.svg" alt="Serviços de Gráfica">
                         <h3>Serviços de Gráfica</h3>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit distinctio ipsum voluptas est animi! Suscipit, veritatis quas.
@@ -151,38 +156,35 @@
                       </div>
                       
                       <script>
-                      function onClick(element) {
-                        document.getElementById("img01").src = element.src;
-                        document.getElementById("m01").style.display = "block";
-                      }
+                   
                       </script>
                 </div>
             </article>
             <section class="Cursos w3-container">
                 <ul>
                     <a href="#"><li>
-                        <img src="Sources/img/ajoead4.jpeg" alt="Informática">
+                        <img src="Sources/img/service_curses/informatica.jpg" alt="Informática">
                         <article>
                         <h2>Informática</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </article>
                     </li></a>
                     <a href="#"><li>
-                        <img src="Sources/img/ajoead4.jpeg" alt="Excel">
+                        <img src="Sources/img/service_curses/excel.jpg" alt="Excel">
                         <article>
                         <h2>Excel Nivel Médio</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </article>
                     </li></a>
                     <a href="#"><li>
-                        <img src="Sources/img/ajoead4.jpeg" alt="Contabilidade">
+                        <img src="Sources/img/service_curses/workplace-results-professional-report-accounting-during.jpg" alt="Contabilidade">
                         <article>
                         <h2>Contabilidade Financeira</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </article>
                     </li></a>
                     <a href="#"><li>
-                        <img src="Sources/img/ajoead4.jpeg" alt="Secretario">
+                        <img src="Sources/img/service_curses/secretariado.jpg"  alt="Secretario">
                         <article>
                             <h2>Secretariado</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
@@ -248,44 +250,7 @@
     </section>
    </footer>
 
-   <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = x.length} ;
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-         dots[i].classList.remove("w3-white");
-      }
-      x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].classList.add("w3-white");
-    }
-    function myAccFunc() {
-        document.getElementById("demoAcc").classList.toggle("w3-show");
-        document.getElementById("demoAcc").previousElementSibling.classList.toggle("w3-green");
-    }
-    function w3_open() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-      }
-      function w3_close() {
-        document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-      }
-    
-    </script>
+   <script src="Sources/Script/allScript.js"></script>
+
 </body>
 </html>
