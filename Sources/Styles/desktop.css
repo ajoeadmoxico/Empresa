@@ -1,1 +1,37 @@
 @charset 'UTF-8';
+.fundo>article>h1{
+    font-size: large;
+    font-weight: light;
+    line-height: 1;
+    text-align: center;
+}
+.fundo>article>h2{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+.navegacao{
+    display: flex;
+    flex-direction: column;
+   flex: content;
+  padding-top: 1rem !important;
+   position: relative !important;
+}
+
+.fundo{
+    margin: 0;
+    top: 0;
+    padding-top: 0;
+}
+main{
+    margin: 0;
+}
+.parallax{
+    padding: 0;
+}
+.logotipo_cima{
+    flex-direction: column;
+   text-align: center;
+   padding: 1rem;
+}

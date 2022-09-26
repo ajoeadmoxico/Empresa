@@ -6,20 +6,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    
-   
-
-    
-  
+    align-items: center; 
 }
 
-.service ul{
+.service{
     display: flex;
     
     flex-direction: column;
    justify-content: center;
    align-items: center;
+}
+.service>article{
+    width: 100%;
 }
 .item-menu{
 display: none;
@@ -60,7 +58,7 @@ main{
     margin: 0 auto;
 }
 .fundo{
-    width: 90%;
+    width: 100%;
 }
 .fundo article{
     width: 100%;
@@ -76,11 +74,16 @@ main{
 
     flex-direction: column;
    justify-content: center;
-  
-    
     
 }
-
+.carroussel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    width: 100%;
+}
 
 footer>div>ul{
     padding: 1rem;
@@ -100,3 +103,34 @@ footer>div>ul{
 footer li{
     text-align: center;
 }
+
+/* paralax */
+
+.fundo article{
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.fundo{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.fundo>article{
+    margin: 0;
+    padding:.2rem;
+}
+.fundo>article>h1{
+    font-size: large;
+    font-weight: light;
+    line-height: 1;
+    text-align: center;
+}
+.fundo>article>h2{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
