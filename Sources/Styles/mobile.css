@@ -10,14 +10,17 @@
 }
 .lateral{
     text-align: center;
-    background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) !important;
-    background:linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) !important;
+    background:-webkit-linear-gradient(right, rgba(0, 33, 46, 0.5), rgb(1, 41, 64)) !important;
+    background:linear-gradient(right, rgba(0, 33, 46, 0.5), rgb(1, 41, 64)) !important;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.317);
+    color: whitesmoke;
 }
 .lateral li {
     font-size: 1.2em !important;
     text-align: center;
     border-bottom: 1px solid rgba(169, 169, 251, 0.156);
-    color: rgb(0, 115, 255);
+    color: whitesmoke\
     font-weight: bold;
     
 
@@ -45,6 +48,7 @@ display: none;
 }
 .img-logo{
     display: none;
+   
 }
 .logotipo_cima img{
     width: 100px;
@@ -67,18 +71,22 @@ display: none;
 main{
     margin-top: 200px;
 }
-.bas-vindas img{
-    width: 500px;
-}
-.mySlider{
+
+.mySlides{
+    
     margin: 0 auto;
+   
+    
 }
+
 .fundo{
     width: 100%;
+    box-sizing: border-box;
 }
-.fundo article{
+.fundo>div>article{
     width: 100%;
-    margin-top: 30px;
+  
+ 
 }
 
 .Cursos>ul>li{
@@ -122,11 +130,13 @@ footer li{
 
 /* paralax */
 
-.fundo article{
+.mySlides>article{
     width: 100%;
     padding: 4rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
 }
 .fundo{
     flex-direction: column-reverse;
@@ -137,13 +147,13 @@ footer li{
     margin: 0;
     padding:.2rem;
 }
-.fundo>article>h1{
+.fundo>div>article>h1{
     font-size: large;
     font-weight: light;
     line-height: 1;
     text-align: center;
 }
-.fundo>article>h2{
+.fundo>div>article>h2{
     font-size: 3em;
     font-weight: bold;
     line-height: 1;

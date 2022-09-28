@@ -11,15 +11,15 @@
     line-height: 1;
     text-align: center;
 }
-.navegacao{
+/* .navegacao{
     display: flex;
     flex-direction: column;
 margin: 0;
   padding-top: 0.1rem !important;
    position: relative !important;
    justify-content: space-between;
-}
-.img-logo{
+} */
+/* .img-logo{
     width: 100px !important;
 }
 
@@ -38,4 +38,4 @@ main{
     flex-direction: column;
    text-align: center;
    padding: 1rem;
-}
+} */

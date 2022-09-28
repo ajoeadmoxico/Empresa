@@ -64,6 +64,9 @@ function w3_open() {
     evt.currentTarget.classList.add("w3-light-grey");
   }
 
+//SlideShow automático
+
+
   //Abertura de janelas do Menu Inicial
 
 

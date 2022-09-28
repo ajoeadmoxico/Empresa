@@ -14,6 +14,7 @@ html, body, main{
     background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) 
 
 }
+
 main{
     display: flex;
     max-width: 1280px;
@@ -39,7 +40,8 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position: fixed;
+    width: 100%;
     background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245));
     background:linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245));
     
@@ -49,13 +51,13 @@ li{
 .parallax{
     margin: 0;
     height: 100vh;
-    padding-top: 1em;
+    padding-top: 0;
     width: 100%;
     background-image: url('../img/ajoead3.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-
+    box-sizing: border-box;
    
 }
 .fundo{
@@ -68,9 +70,11 @@ li{
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
     background:linear-gradient(left, red,black);
     background:-webkit-linear-gradient(left, rgba(8, 81, 239, 0.752),rgba(2, 1, 21, 0.483));
 }
+
 .img-logo{
     width: 80px;
 }
@@ -90,9 +94,19 @@ li{
     background-color: rgba(223, 161, 7, 0.388) !important;
     margin: 10px;
 }
-.fundo article{
-    width: 50%;
-    margin-top: 30px;
+.mySlides{
+    
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mySlides{
+    background-color: rgba(255, 191, 0, 0.122);
+    margin: 100px auto;
+}
+.fundo>div> article{
+    max-width: 70%;
+    
     padding: 4rem;
 }
 .fundo>article>h1{
@@ -100,8 +114,9 @@ li{
     font-weight: light;
     line-height: 1;
 }
-.fundo>article>img{
-    width: 100%;
+.fundo>div>article>img{
+    max-width: 200px;
+    display: block;
     
 }
 .fundo>article>h2{
@@ -110,8 +125,8 @@ li{
     font-weight: bolder;
     text-transform: uppercase;
 }
-.mySlides img{
-    width:100% ;opacity:0.2;
+.mySlides{
+    display: none;
     
 }
 footer>div>ul{

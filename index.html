@@ -36,20 +36,20 @@
             <section>
 
                 <a onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
-                <div class="lateral">
+                <div class="">
                   
-                    <div id="demoAcc" class="w3-sidenav   w3-animate-rigth" style="width:70%; left:0;display:none">
+                    <div id="demoAcc" class="w3-sidenav lateral w3-animate-rigth" style="width:70%; left:0;display:none">
                         <div>
-                        <img class="img-logo1" src="Sources/img/ajoead.svg" alt="Logotipo Ajoead" width="300px" style="margin: 0 auto;">
+                        <img class="img-logo1" src="Sources/img/ajoead.svg" alt="Logotipo Ajoead" width="120px" style="margin: 0 auto;">
                         <h2>Prestação de Serviços</h2>
                         <hr>
-                    </div>
+                        </div>
  
-                    <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="icon-home"></i><br> Home</a></li>
-                    <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>
-                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i><br> Cursos</a></li>
-                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i><br> Galeria</a></li>
-                    <li><a onclick="openWindow('contact')"  href="#" class=""><i class="icon-phone"></i><br> Contactos</a></li>
+                        <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="icon-home"></i><br> Home</a></li>
+                        <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>
+                        <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i><br> Cursos</a></li>
+                        <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i><br> Galeria</a></li>
+                        <li><a onclick="openWindow('contact')"  href="#" class=""><i class="icon-phone"></i><br> Contactos</a></li>
 
                     </div>
             </section>
@@ -58,19 +58,67 @@
    
    <main class="main-area">
         <section class="parallax">
-                <div class="fundo">
-               <article>
-                <h1>
-                    Seja bem Vindo a nossa Empresa
-                </h1>
-                <h2>
-                    Encontre aqui os nossos melhores serviços e cursos
-                </h2>
-               </article>
-               <article>
-                <img src="Sources/img/service_curses/jardinagem.svg" alt="">
-               </article>
+            <!-- local do slideshow -->
+           <div class="fundo" style="">
+            <!-- elementos do slide -->
+                <div class="mySlides">
+                    <article>
+                    <h1>
+                        Seja bem Vindo a nossa Empresa
+                    </h1>
+                    <h2>
+                        Encontre aqui os nossos melhores serviços e cursos
+                    </h2>
+                    </article>
+                    <article>
+                    <img src="Sources/img/ajoead.svg" alt="">
+                    </article>
                 </div>
+                <!-- elementos do slide -->
+                <div class="mySlides">
+                    <article>
+                        <h1>
+                            Serviços de Limpesa e Saneamento Básico
+                        </h1>
+                        <h2>
+                            Temos recursos suficentes e de qualidade, para manter seu espaço de trabalho ou residencia <hr>
+                            <b>Limpo e Arejado</b>
+                        </h2>
+                    </article>
+                    <article>
+                        <img src="Sources/img/service_curses/limpeza.png" alt="">
+                    </article>
+                </div>
+                 <!-- elementos do slide -->
+                 <div class="mySlides">
+                    <article>
+                    <h1>
+                        Serviços de Jardinagem e Paisagismo
+                    </h1>
+                    <h2>
+                        Prontos para reabilitar e gerir o jardim de sua casa ou cidade.
+                    </h2>
+                    </article>
+                    <article>
+                    <img src="Sources/img/service_curses/jardinagem.svg" alt="">
+                    </article>
+                </div>
+                <!-- elementos do slide -->
+                <div class="mySlides">
+                    <article>
+                        <h1>
+                            Segurança Electronica
+                        </h1>
+                        <h2>
+                            Proteja sua residencia ou Empresa com nossos serviços de segurança Electronica!<hr>
+                            <b>Garatimos Segurança e Transparencia</b>
+                        </h2>
+                    </article>
+                    <article>
+                        <img src="Sources/img/service_curses/Camera.svg" alt="">
+                    </article>
+                </div>
+           </div>
         </section>
         <section class="service-area">
             <h2 class="we-title">Nossos Serviços</h2>
@@ -253,7 +301,23 @@
            </footer>
    </main>
    
+<script>
+    //Slideshow automático  
+var myIndex = 0;
+carousel();
 
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "flex";  
+setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
    <script src="Sources/Script/allScript.js"></script>
 
 </body>
