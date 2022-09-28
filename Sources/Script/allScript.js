@@ -29,8 +29,15 @@ function myAccFunc() {
     document.getElementById("demoAcc").previousElementSibling.classList.toggle("w3-green");
 }
 function w3_open() {
+  var estado=document.getElementsByClassName("w3-sidenav")[0].style.display;
+  if(estado=="block"){
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+
+  }else{
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+
   }
+}
   function w3_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
   }

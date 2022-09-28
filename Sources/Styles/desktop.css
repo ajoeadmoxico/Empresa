@@ -14,9 +14,13 @@
 .navegacao{
     display: flex;
     flex-direction: column;
-   flex: content;
-  padding-top: 1rem !important;
+margin: 0;
+  padding-top: 0.1rem !important;
    position: relative !important;
+   justify-content: space-between;
+}
+.img-logo{
+    width: 100px !important;
 }
 
 .fundo{

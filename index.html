@@ -16,9 +16,9 @@
 </head>
 <body>
    <header>
-        <nav class="navegacao w3-container w3-navbar w3-top  w3-text-blue">
+        <nav class="navegacao">
             <section class="logotipo_cima fundo-img">
-                <img src="Sources/img/ajoead.svg" alt="" width="200px">
+                <img class="img-logo" src="Sources/img/ajoead.svg" alt="Logotipo Ajoead" width="200px">
                 <span>
                 <p style="font-weight:bold;" class="nome_empresa">AJOEAD MOXICO</p>
                 <p style="font-size: smaller; line-height:0.8">Empresa de Prestação de Serviços e Formação Profissional</p>
@@ -26,20 +26,24 @@
             </section>
             <section>
                 <ul class="item-menu">
-                    <li><a onclick="openWindow('home')" href="#" class="w3-blue"><i class="icon-home"></i> Home</a></li>
-                    <li><a onclick="openWindow('service')"  href="#"><i class="icon-user"></i> Serviços</a></li>
-                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i> Cursos</a></li>
-                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i> Galeria</a></li>
-                    <li><a onclick="openWindow('contact')"  href="#"><i class="icon-phone"></i> Contactos</a></li>
+                    <li><a onclick="openWindow('home')" href="#"><i class="icon-home"></i> <hr><b>Home</b></a></li>
+                    <li><a onclick="openWindow('service')"  href="#"><i class="icon-user"></i> <hr><b>Serviços</b></a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i> <hr><b>Cursos</b></a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i> <hr><b>Galeria</b></a></li>
+                    <li><a onclick="openWindow('contact')"  href="#"><i class="icon-phone"></i> <hr><b>Contactos</b></a></li>
                 </ul>
             </section>
             <section>
+
                 <a onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
-                <div class="">
+                <div class="lateral">
                   
-                    <div id="demoAcc" class="w3-sidenav w3-white  w3-animate-rigth" style="width:30%; left:0;display:none">
-                        <a href="javascript:void(0)" onclick="w3_close()" 
-                        class="w3-closenav w3-large w3-hide-large">×</a>
+                    <div id="demoAcc" class="w3-sidenav   w3-animate-rigth" style="width:70%; left:0;display:none">
+                        <div>
+                        <img class="img-logo1" src="Sources/img/ajoead.svg" alt="Logotipo Ajoead" width="300px" style="margin: 0 auto;">
+                        <h2>Prestação de Serviços</h2>
+                        <hr>
+                    </div>
  
                     <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="icon-home"></i><br> Home</a></li>
                     <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>

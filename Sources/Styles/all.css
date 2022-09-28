@@ -9,6 +9,10 @@
 html, body, main{
     width: 100%;
     height: 100%;
+    background:linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245));
+
+    background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) 
+
 }
 main{
     display: flex;
@@ -36,8 +40,8 @@ li{
     justify-content: space-between;
     align-items: center;
     
-    background:linear-gradient(top, red, black); 
-    background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(250, 250, 250)) 
+    background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245));
+    background:linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245));
     
   
 }
@@ -64,7 +68,11 @@ li{
     flex-direction:row;
     justify-content: center;
     align-items: center;
-    background-color: rgba(8, 73, 138, 0.475);
+    background:linear-gradient(left, red,black);
+    background:-webkit-linear-gradient(left, rgba(8, 81, 239, 0.752),rgba(2, 1, 21, 0.483));
+}
+.img-logo{
+    width: 80px;
 }
 .setas{
     
@@ -162,7 +170,40 @@ footer>section>p{
 }
 .item-menu{
     font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: rgb(4, 85, 185);
+    line-height: 0;
     
+}
+.item-menu>li> a{
+    padding: 0.5em;
+   
+    
+    
+}
+.item-menu>li> a>b{
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+    
+    
+}
+.item-menu>li>a>i{
+    font-size: 1.5em;
+    text-align: center;
+}
+.item-menu>li:hover{
+    background-color: rgba(6, 60, 125, 0.453);
+    color: white;
+    border-radius: 1em;
+}
+.item-menu li{
+   padding: 0.9em;
+    margin-left: 1em;
+    text-align: center;
 }
 .btn-contactar{
     text-decoration: none;
@@ -332,6 +373,7 @@ font-size: 1em;
     justify-content: center;
     align-items: center;
     margin: 0.5em;
+    background-color: white;
     margin-bottom: 2em;
     padding: 1em;
   

@@ -8,6 +8,20 @@
     justify-content: space-between;
     align-items: center; 
 }
+.lateral{
+    text-align: center;
+    background:-webkit-linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) !important;
+    background:linear-gradient(bottom, rgb(248, 253, 255), rgb(221, 233, 245)) !important;
+}
+.lateral li {
+    font-size: 1.2em !important;
+    text-align: center;
+    border-bottom: 1px solid rgba(169, 169, 251, 0.156);
+    color: rgb(0, 115, 255);
+    font-weight: bold;
+    
+
+}
 
 .service{
     display: flex;
@@ -25,18 +39,20 @@ display: none;
 .logotipo_cima{
     display: flex;
     margin: 1rem;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
+.img-logo{
+    display: none;
+}
 .logotipo_cima img{
     width: 100px;
 }
 
 .logotipo_cima span{
     display: flex;
-    margin: 10px;
+    margin: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,7 +60,7 @@ display: none;
 
 .nome_empresa{
     font-size: 25pt;
-    color: rgb(250, 167, 23);
+    color: rgb(0, 106, 255);
     letter-spacing: -5px;
     text-shadow: 1px 2px 5px rgba(0, 0, 255, 0.165);
 }
