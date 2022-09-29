@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="Sources/Styles/all.css" media="all">
     <link rel="stylesheet" href="Sources/Styles/desktop.css" media="screen and (orientation:landscape)">
     <link rel="stylesheet" href="Sources/Styles/mobile.css" media="screen and (max-width:768px)">
-    <link rel="stylesheet" href="Sources/Fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="Sources/Fonts/fontawesome-free-6.2.0-web/css/all.css">
     <link rel="stylesheet" href="Sources/Styles/w3.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
    <script src="Sources/Script/ScriptAction.js"></script>
 
     <title>Ajoead - Prestação de Serviços e Formação Profissional</title>
@@ -21,21 +20,32 @@
                 <img class="img-logo" src="Sources/img/ajoead.svg" alt="Logotipo Ajoead" width="200px">
                 <span>
                 <p style="font-weight:bold;" class="nome_empresa">AJOEAD MOXICO</p>
-                <p style="font-size: smaller; line-height:0.8">Empresa de Prestação de Serviços e Formação Profissional</p>
+                <p class="description" style="font-size: smaller; line-height:0.8">Empresa de Prestação de Serviços e Formação Profissional</p>
                 </span>
             </section>
             <section>
                 <ul class="item-menu">
-                    <li><a onclick="openWindow('home')" href="#"><i class="icon-home"></i> <hr><b>Home</b></a></li>
-                    <li><a onclick="openWindow('service')"  href="#"><i class="icon-user"></i> <hr><b>Serviços</b></a></li>
-                    <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i> <hr><b>Cursos</b></a></li>
-                    <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i> <hr><b>Galeria</b></a></li>
-                    <li><a onclick="openWindow('contact')"  href="#"><i class="icon-phone"></i> <hr><b>Contactos</b></a></li>
+                    <li><a onclick="openWindow('home')" href="#"><i class="fa fa-house"></i> <b>Home</b></a></li>
+                    <li><a onclick="openWindow('service')"  href="#"><i class="fa fa-briefcase"></i> <b>Serviços</b></a></li>
+                    <li><a onclick="openWindow('curso')"  href="#"><i class="fa fa-graduation-cap"></i> <b>Cursos</b></a></li>
+                    <li><a onclick="openWindow('galery')"  href="#"><i class="fa fa-image"></i></i><b>Galeria</b></a></li>
+                    <li><a onclick="openWindow('contact')"  href="#"><i class="fa fa-address-card"></i> <b>Contactos</b></a></li>
+                    <li><a onclick="openSearch()"  href="#"><i class="fa fa-magnifying-glass"></i><b>Search</b></a></li>
+
                 </ul>
+            </section>
+            <section class="for-mobile" style="display:none ;">
+                <a onclick="openWindow('home')" href="#"><i class="fa fa-home"></i></a>
+            </section>
+            <section class="for-mobile" style="display:none ;">
+                <a href="#"><i class="fa fa-briefcase"></i></a>
+            </section>
+            <section class="for-mobile" style="display:none ;">
+                <a onclick="openSearch()" href="#"><i class="fa fa-search"></i></a>
             </section>
             <section>
 
-                <a onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
+                <a id="btnMobile" onclick="w3_open()" class="w3-btn-floating w3-blue w3-large btn-menu-mobile" style="top:90%;right:0px; margin:10px; position:fixed; opacity:0.8">☰</a>
                 <div class="">
                   
                     <div id="demoAcc" class="w3-sidenav lateral w3-animate-rigth" style="width:70%; left:0;display:none">
@@ -45,15 +55,23 @@
                         <hr>
                         </div>
  
-                        <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="icon-home"></i><br> Home</a></li>
-                        <li><a onclick="openWindow('service')"  class="" href="#"><i class="icon-user"></i><br> Serviços</a></li>
-                        <li><a onclick="openWindow('curso')"  href="#"><i class="icon-book"></i><br> Cursos</a></li>
-                        <li><a onclick="openWindow('galery')"  href="#"><i class="icon-picture"></i><br> Galeria</a></li>
-                        <li><a onclick="openWindow('contact')"  href="#" class=""><i class="icon-phone"></i><br> Contactos</a></li>
+                        <li><a onclick="openWindow('home')"  href="#" class="w3-blue"><i class="fa fa-home"></i><br> Home</a></li>
+                        <li><a onclick="openWindow('service')"  class="" href="#"><i class="fa fa-briefcase"></i><br> Serviços</a></li>
+                        <li><a onclick="openWindow('curso')"  href="#"><i class="fa fa-graducation-cap"></i><br> Cursos</a></li>
+                        <li><a onclick="openWindow('galery')"  href="#"><i class="fa fa-image"></i><br> Galeria</a></li>
+                        <li><a onclick="openWindow('contact')"  href="#" class=""><i class="fa fa-magnifying-glass"></i><br> Contactos</a></li>
 
                     </div>
             </section>
         </nav>
+        <section class="search-bar" style="position:fixed; top:5%;">
+            <!-- barra de pesquisa -->
+            <div>
+                <form action="">
+                   <i class="fa fa-search"></i> <input type="search" placeholder="O que pretendes pesquisar?">
+                </form>
+            </div>
+        </section>
    </header>
    
    <main class="main-area">
@@ -62,21 +80,25 @@
            <div class="fundo" style="">
             <!-- elementos do slide -->
                 <div class="mySlides">
-                    <article>
-                    <h1>
-                        Seja bem Vindo a nossa Empresa
-                    </h1>
-                    <h2>
-                        Encontre aqui os nossos melhores serviços e cursos
-                    </h2>
-                    </article>
-                    <article>
-                    <img src="Sources/img/ajoead.svg" alt="">
-                    </article>
+                    <div class="conteudo">
+                        <article class="texto-slide">
+                            <h1>
+                                Seja bem Vindo a nossa Empresa
+                            </h1>
+                            <h2>
+                                Encontre aqui os nossos melhores serviços e cursos
+                            </h2>
+                         </article>
+                            <article class="picture-slide">
+                            <img src="Sources/img/ajoead.svg" alt="">
+                            </article>
+                    </div>
+                    
                 </div>
                 <!-- elementos do slide -->
                 <div class="mySlides">
-                    <article>
+                    <div class="conteudo">
+                    <article class="texto-slide">
                         <h1>
                             Serviços de Limpesa e Saneamento Básico
                         </h1>
@@ -85,13 +107,15 @@
                             <b>Limpo e Arejado</b>
                         </h2>
                     </article>
-                    <article>
+                    <article class="picture-slide">
                         <img src="Sources/img/service_curses/limpeza.png" alt="">
                     </article>
+                    </div>
                 </div>
                  <!-- elementos do slide -->
                  <div class="mySlides">
-                    <article>
+                    <div class="conteudo">
+                    <article class="texto-slide">
                     <h1>
                         Serviços de Jardinagem e Paisagismo
                     </h1>
@@ -99,24 +123,27 @@
                         Prontos para reabilitar e gerir o jardim de sua casa ou cidade.
                     </h2>
                     </article>
-                    <article>
+                    <article class="picture-slide">
                     <img src="Sources/img/service_curses/jardinagem.svg" alt="">
                     </article>
+                    </div>
                 </div>
                 <!-- elementos do slide -->
                 <div class="mySlides">
-                    <article>
+                    <div class="conteudo">
+                    <article class="texto-slide">
                         <h1>
                             Segurança Electronica
                         </h1>
                         <h2>
                             Proteja sua residencia ou Empresa com nossos serviços de segurança Electronica!<hr>
-                            <b>Garatimos Segurança e Transparencia</b>
+                            <b style="font-size:12pt ;">Garatimos Segurança e Transparencia</b>
                         </h2>
                     </article>
-                    <article>
-                        <img src="Sources/img/service_curses/Camera.svg" alt="">
+                    <article class="picture-slide">
+                        <img style="width:100% ;" src="Sources/img/service_curses/Camera.svg" alt="camera de segurança">
                     </article>
+                    </div>
                 </div>
            </div>
         </section>
@@ -167,19 +194,19 @@
                 <div class="carroussel">
                     
                         <div class="item">
-                          <img src="Sources/img/ajoead1.jpeg" style="width:100%" onclick="onClick(this)">
-                          <p class="titulo">Visita da Jotta MPLA</p>
-                          <p class="data">Agosto/2020</p>
+                          <img src="Sources/img/ajoead4.jpeg" alt="Sala de Informática" style="width:100%" onclick="onClick(this)">
+                          <p class="titulo">Formandos do curso de Informática básica na optica do uilizador</p>
+                          <p class="data"><i class="fa fa-calendar"></i> Agosto/2020</p>
                         </div>
                         <div class="item">
                           <img src="Sources/img/ajoead2.jpeg" style="width:100%" onclick="onClick(this)">
-                          <p class="titulo">Visita da Jotta MPLA</p>
-                          <p class="data">Agosto/2020</p>
+                          <p class="titulo">Visita da JMPLA no tempo de pandemia</p>
+                          <p class="data"><i class="fa fa-calendar"></i> Agosto/2020</p>
                         </div>
                         <div class="item">
                           <img src="Sources/img/ajoead3.jpeg" style="width:100%" onclick="onClick(this)">
-                          <p class="titulo">Visita da Jotta MPLA</p>
-                          <p class="data">Agosto/2020</p>
+                          <p class="titulo">Apresentação de condições para gerenciamento de cursos em tempo de pandemia</p>
+                          <p class="data"><i class="fa fa-calendar"></i> Agosto/2020</p>
                         </div>
                       </div>
                       
@@ -196,48 +223,53 @@
               
                 <ul>
                     <li>
-                        <h2>Informática Básica</h2>
+                        <img src="Sources/img/service_curses/informatica.jpg" alt="Informática">
+
                         <article>
-                            <img src="Sources/img/service_curses/informatica.jpg" alt="Informática">
+                            <h2>Informática Básica</h2>
 
                             <p>
-                                <b>Duração:</b>   2 MESES<br>
-                                <b>Preço:</b>   15.000,00 kz<br>
+                                <i class="fa fa-clock"></i> <b>Duração:</b>   2 MESES<br>
+                                <i class="fa fa-coins"></i> <b>Preço:</b>   15.000,00 kz<br>
                             </p>
                         </article>
                     </li>
                     <li>
-                        <h2>Excel Nivel Médio</h2>
+                       
+                        <img src="Sources/img/service_curses/excel.jpg" alt="Excel">
 
                         <article>
-                            <img src="Sources/img/service_curses/excel.jpg" alt="Excel">
-
+                            <h2>Excel Nivel Médio</h2>
                             <p>
-                                <b>Duração:</b>   2 MESES<br>
-                                <b>Preço:</b>   15.000,00 kz<br>
+                                <i class="fa fa-clock"></i> <b>Duração:</b>   2 MESES<br>
+                                <i class="fa fa-coins"></i> <b>Preço:</b>   15.000,00 kz<br>
+
                             </p>
                         </article>
                     </li>
                     <li>
-                        <h2>Contabilidade Financeira</h2>
+                        <img src="Sources/img/service_curses/workplace-results-professional-report-accounting-during.jpg" alt="Contabilidade">
 
                         <article>
-                            <img src="Sources/img/service_curses/workplace-results-professional-report-accounting-during.jpg" alt="Contabilidade">
+                            <h2>Contabilidade Financeira</h2>
 
                             <p>
-                                <b>Duração:  </b>   2 MESES<br>
-                                <b>Preço:  </b>   15.000,00 kz<br>
+                                <i class="fa fa-clock"></i> <b>Duração:</b>   2 MESES<br>
+                                <i class="fa fa-coins"></i> <b>Preço:</b>   15.000,00 kz<br>
+
                             </p>
                     </article>
                     </li>
                     <li>
-                        <h2>Secretariado Básico</h2>
-                       
+                        <img src="Sources/img/service_curses/secretariado.jpg"  alt="Secretariado">
+
                         <article>
-                            <img src="Sources/img/service_curses/secretariado.jpg"  alt="Secretario">
+                            <h2>Secretariado Básico</h2>
+
                             <p>
-                                <b>Duração:</b>   2 MESES<br>
-                                <b>Preço:</b>   15.000,00 kz<br>
+                                <i class="fa fa-clock"></i> <b>Duração:</b>   2 MESES<br>
+                                <i class="fa fa-coins"></i> <b>Preço:</b>   15.000,00 kz<br>
+
                             </p>
                         </article>
                         
@@ -280,7 +312,7 @@
                     </li>
                 </ul>
                 <article>
-                    <h3>Assine</h3>
+                    <h3 style="margin-left: 2em;">Assine na Nossa Newslatter</h3>
                       <form class="w3-white w3-padding" action="index.html" method="post">
                         <p class="w3-label w3-text-blue">Inscreva na nossa lista de E-mails para poder entrar em contacto.</p>
         

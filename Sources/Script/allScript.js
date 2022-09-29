@@ -30,12 +30,29 @@ function myAccFunc() {
 }
 function w3_open() {
   var estado=document.getElementsByClassName("w3-sidenav")[0].style.display;
+  var text=document.getElementById('btnMobile');
   if(estado=="block"){
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    text.style.fontSize="6em";
+    text.style.padding="0";
+    text.innerText='×';
+    text.innerText='☰'
+
 
   }else{
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-
+    text.style.fontSize="6em";
+    text.style.padding="0";
+    text.innerText='×';
+    
+  }
+}
+function openSearch(){
+  var panel=document.getElementsByClassName('search-bar')[0];
+  if(panel.style.display=="block"){
+      panel.style.display="none";
+  }else{
+    panel.style.display="block";
   }
 }
   function w3_close() {
