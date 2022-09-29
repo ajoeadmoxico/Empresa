@@ -25,7 +25,8 @@
 .lateral{
     text-align: center;
     background:-webkit-linear-gradient(right, rgb(252, 252, 252), rgb(255, 255, 255)) !important;
-    background:linear-gradient(right, rgb(1, 97, 134), rgb(1, 41, 64)) !important;
+    background:linear-gradient(right, rgb(252, 252, 252), rgb(255, 255, 255)) !important;
+    
     box-sizing: border-box;
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.317);
     color: black;
